@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMKN 8 Kota Bekasi</title>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172033}
+header{background:linear-gradient(135deg,#061a35,#0878c9);color:white;padding:28px 16px;text-align:center}
+header h1{margin:0;font-size:30px}
+header p{margin-bottom:0}
+nav{background:#082744;display:flex;justify-content:center;flex-wrap:wrap}
+nav a, .dropbtn{color:white;text-decoration:none;padding:15px 12px;display:block;font-size:14px}
+nav a:hover,.dropdown:hover .dropbtn{background:#1264a3}
+.dropdown{position:relative}
+.dropbtn{border:0;background:none;cursor:pointer;font-size:14px}
+.dropdown-content{display:none;position:absolute;top:100%;left:0;background:white;min-width:220px;box-shadow:0 5px 15px #0002;z-index:10}
+.dropdown-content a{color:#172033;padding:12px 15px}
+.dropdown-content a:hover{background:#e6f2ff}
+.dropdown:hover .dropdown-content{display:block}
+.hero{padding:65px 20px;text-align:center;background:linear-gradient(135deg,#dcecff,#fff)}
+.hero h2{font-size:32px;color:#073c78}
+.hero p{line-height:1.7;max-width:650px;margin:auto}
+.btn{display:inline-block;margin-top:20px;background:#0878c9;color:white;text-decoration:none;padding:13px 20px;border-radius:7px}
+.container{max-width:1100px;margin:auto;padding:25px 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:white;padding:22px;border-radius:12px;box-shadow:0 3px 12px #00000010}
+.card h3{color:#0759a6}
+.card a{color:#0878c9}
+.page{display:none;min-height:350px}
+.page.active{display:block}
+footer{background:#082744;color:white;text-align:center;padding:25px;margin-top:25px}
+@media(max-width:600px){
+header h1{font-size:24px}
+nav a,.dropbtn{padding:12px 8px;font-size:12px}
+.dropdown-content{max-width:90vw}
+.hero h2{font-size:25px}
+}
+</style>
+</head>
+
+<body>
+<header>
+<h1>SMKN 8 KOTA BEKASI</h1>
+<p>Sekolah Menengah Kejuruan Kota Bekasi</p>
+</header>
+
+<nav>
+<a href="#beranda" onclick="showPage('beranda')">Beranda</a>
+<a href="#spmb" onclick="showPage('spmb')">Info SPMB</a>
+
+<div class="dropdown">
+<button class="dropbtn">Info ▼</button>
+<div class="dropdown-content">
+<a href="#visi" onclick="showPage('visi')">Visi Misi</a>
+<a href="#kegiatan" onclick="showPage('kegiatan')">Kegiatan Sekolah</a>
+<a href="#lowongan" onclick="showPage('lowongan')">Lowongan Pekerjaan</a>
+<a href="#dunia-smk" onclick="showPage('dunia-smk')">Dunia SMK</a>
+<a href="#berita" onclick="showPage('berita')">Berita</a>
+<a href="#kelulusan" onclick="showPage('kelulusan')">Informasi Kelulusan TA</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Program Keahlian ▼</button>
+<div class="dropdown-content">
+<a href="#dgm" onclick="showPage('dgm')">Desain Gambar Mesin (DGM)</a>
+<a href="#animasi" onclick="showPage('animasi')">Animasi</a>
+<a href="#grafika" onclick="showPage('grafika')">Desain Grafika</a>
+<a href="#akuntansi" onclick="showPage('akuntansi')">Akuntansi & Keuangan Lembaga</a>
+<a href="#tkj" onclick="showPage('tkj')">Teknik Komputer dan Jaringan (TKJ)</a>
+<a href="#perbankan" onclick="showPage('perbankan')">Perbankan Syariah</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Gallery ▼</button>
+<div class="dropdown-content">
+<a href="#masjid" onclick="showPage('masjid')">Masjid</a>
+<a href="#perpustakaan" onclick="showPage('perpustakaan')">Perpustakaan</a>
+<a href="#lab" onclick="showPage('lab')">Lab Sekolah</a>
+<a href="#uks" onclick="showPage('uks')">UKS</a>
+<a href="#koperasi" onclick="showPage('koperasi')">Koperasi</a>
+<a href="#kantin" onclick="showPage('kantin')">Kantin</a>
+<a href="#parkiran" onclick="showPage('parkiran')">Parkiran Kendaraan</a>
+</div>
+</div>
+<a href="#admin" onclick="showPage('admin')">Admin</a>
+</nav>
+
+<section id="beranda" class="page active">
+<div class="hero">
+<h2>Selamat Datang di SMKN 8 Kota Bekasi</h2>
+<p>Temukan informasi sekolah, program keahlian, kegiatan, berita, dan penerimaan peserta didik baru melalui website sekolah.</p>
+<a class="btn" href="#spmb" onclick="showPage('spmb')">Informasi SPMB</a>
+</div>
+<div class="container">
+<h2>Jelajahi Website Sekolah</h2>
+<div class="grid">
+<div class="card"><h3>Informasi SPMB</h3><p>Informasi penerimaan peserta didik baru.</p><a href="#spmb" onclick="showPage('spmb')">Selengkapnya</a></div>
+<div class="card"><h3>Program Keahlian</h3><p>Kenali enam program keahlian sekolah.</p></div>
+<div class="card"><h3>Berita Sekolah</h3><p>Informasi dan kegiatan sekolah.</p><a href="#berita" onclick="showPage('berita')">Baca berita</a></div>
+<div class="card"><h3>Galeri Sekolah</h3><p>Kenali fasilitas sekolah.</p></div>
+</div>
+</div>
+</section>
+
+<div class="container">
+<section id="spmb" class="page"><h2>Informasi SPMB</h2><div class="card"><p>Informasi pendaftaran peserta didik baru akan diumumkan di halaman ini.</p><p>Silakan periksa pengumuman resmi sekolah untuk jadwal dan persyaratan terbaru.</p></div></section>
+
+<section id="visi" class="page"><h2>Visi Misi</h2><div class="card"><p>Informasi visi dan misi sekolah akan ditampilkan di sini.</p></div></section>
+<section id="kegiatan" class="page"><h2>Kegiatan Sekolah</h2><div class="card"><p>Informasi kegiatan sekolah akan ditampilkan di sini.</p></div></section>
+<section id="lowongan" class="page"><h2>Lowongan Pekerjaan</h2><div class="card"><p>Informasi lowongan pekerjaan akan ditampilkan di sini.</p></div></section>
+<section id="dunia-smk" class="page"><h2>Dunia SMK</h2><div class="card"><p>Informasi dunia SMK akan ditampilkan di sini.</p></div></section>
+<section id="berita" class="page"><h2>Berita Sekolah</h2><div class="card"><p>Berita sekolah akan ditampilkan di sini.</p></div></section>
+<section id="kelulusan" class="page"><h2>Informasi Kelulusan TA</h2><div class="card"><p>Pengumuman kelulusan akan ditampilkan di sini sesuai jadwal resmi sekolah.</p></div></section>
+
+<section id="dgm" class="page"><h2>Desain Gambar Mesin (DGM)</h2><div class="card"><p>Informasi program keahlian DGM.</p></div></section>
+<section id="animasi" class="page"><h2>Animasi</h2><div class="card"><p>Informasi program keahlian Animasi.</p></div></section>
+<section id="grafika" class="page"><h2>Desain Grafika</h2><div class="card"><p>Informasi program keahlian Desain Grafika.</p></div></section>
+<section id="akuntansi" class="page"><h2>Akuntansi & Keuangan Lembaga</h2><div class="card"><p>Informasi program keahlian Akuntansi & Keuangan Lembaga.</p></div></section>
+<section id="tkj" class="page"><h2>Teknik Komputer dan Jaringan</h2><div class="card"><p>Informasi program keahlian TKJ.</p></div></section>
+<section id="perbankan" class="page"><h2>Perbankan Syariah</h2><div class="card"><p>Informasi program keahlian Perbankan Syariah.</p></div></section>
+
+<section id="masjid" class="page"><h2>Galeri Masjid</h2><div class="card"><p>Foto masjid sekolah akan ditampilkan di sini.</p></div></section>
+<section id="perpustakaan" class="page"><h2>Galeri Perpustakaan</h2><div class="card"><p>Foto perpustakaan akan ditampilkan di sini.</p></div></section>
+<section id="lab" class="page"><h2>Galeri Lab Sekolah</h2><div class="card"><p>Foto laboratorium akan ditampilkan di sini.</p></div></section>
+<section id="uks" class="page"><h2>Galeri UKS</h2><div class="card"><p>Foto UKS akan ditampilkan di sini.</p></div></section>
+<section id="koperasi" class="page"><h2>Galeri Koperasi</h2><div class="card"><p>Foto koperasi akan ditampilkan di sini.</p></div></section>
+<section id="kantin" class="page"><h2>Galeri Kantin</h2><div class="card"><p>Foto kantin akan ditampilkan di sini.</p></div></section>
+<section id="parkiran" class="page"><h2>Galeri Parkiran Kendaraan</h2><div class="card"><p>Foto parkiran akan ditampilkan di sini.</p></div></section>
+
+<section id="admin" class="page">
+<h2>Admin Website</h2>
+<div class="card">
+<p>Halaman ini belum memiliki sistem login dan penyimpanan perubahan.</p>
+<p>Untuk keamanan, fitur Admin sesungguhnya harus dibuat dengan sistem autentikasi dan penyimpanan online.</p>
+</div>
+</section>
+</div>
+
+<footer>
+<p>Website SMKN 8 Kota Bekasi</p>
+<p>Inform
